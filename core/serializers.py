@@ -11,5 +11,5 @@ class ListSerializer(serializers.HyperlinkedModelSerializer):
         item_set = ItemSerializer(many=True)
 
         model = List
-        fields = ['name','owner','item_set']
+        fields = ['id','name','owner','item_set']
 
