@@ -5,6 +5,7 @@ class ItemSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Item
         fields = ['id','name','done']
+        
 class ListSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         '''serializers aninhados'''
