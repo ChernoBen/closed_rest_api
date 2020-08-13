@@ -4,6 +4,8 @@ from django.urls import path,include
 from rest_framework import routers
 from .views import UserViewSet,GroupViewSet
 from core.views import ListViewSet,ItemViewSet
+'''obter token por login'''
+from rest_framework.authtoken import views
 
 
 
@@ -16,5 +18,6 @@ router.register(r'item',ItemViewSet)
 
 urlpatterns = [
     path('',include(router.urls)),
+    path('api-token-auth/',views.obtain_auth_token,name='api-token-auth'),
     path('admin/', admin.site.urls),
 ]
